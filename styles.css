@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+.container {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: justify;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #000000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: beige;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.textbox1 {
+  font-size: 50px;
+  font-family: 'VT323', monospace;
+  color: beige;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.textbox2 {
+  font-size: 30px;
+  font-family: 'VT323', monospace;
+  color: beige;
+  text-align: justify;
+}
+.s-services {
+  font-size: 30px;
+  font-family: 'VT323', monospace;
+  margin-top: 500px;
+  padding-bottom: 50px;
+  background-position: center center;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.column.large-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-heading.section-heading--centerbottom {
+  margin-top: 0;
+}
+
+.s-services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: .85;
+}
+
+
+.s-services h4 {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.s-services a {
+  color: #cf1767;
+}
+
+.s-services a:hover,
+.s-services a:focus,
+.s-services a:active {
+  color: #ffffff;
+}
+
+.services-list {
+  max-width: 1240px;
+  margin: 0 auto;
+  counter-reset: ctr;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+
+.services-list .item-service {
+  margin-bottom: 2.4rem;
+  padding: 0 30px;
+  min-height: 44.8rem;
+}
+
+.services-list .item-service__content {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 3.6rem;
+}
+
+.services-list .item-service__content::before {
+  display: block;
+  content: counter(ctr, decimal-leading-zero) ".";
+  counter-increment: ctr;
+  margin-bottom: 4.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 8rem;
+  line-height: 1;
+  color: #cf1767;
+}
+
+@media (max-width: 767px) {
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+#fondo-estrellas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+.estrella {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background-color: purple;
+  border-radius: 50%;
+  animation: mover-estrella linear infinite;
+}
+
+@keyframes mover-estrella {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(-2000px, 2000px) rotate(720deg);
+  }
+}
+
+.contact-section {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 50px;
+  color: beige;
+  font-family: 'VT323', monospace;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 30px;
+  color: beige;
+  font-family: 'VT323', monospace;
+  margin-bottom: 20px;
+}
+
+.contact-section p1 {
+  font-size: 30px;
+  color: beige;
+  font-family: 'VT323', monospace;
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section label {
+  font-size: 30px;
+  color: beige;
+  font-family: 'VT323', monospace;
+  margin-bottom: 10px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-section button {
+  padding: 10px 30px;
+  background-color: beige;
+  color: purple;
+  border: none;
+  font-size: 20px;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  .textbox1 {
+    font-size: 8vw;
+    text-align: center;
+  }
+
+  .textbox2 {
+    font-size: 5vw;
+  }
+
+  .contact-section label,
+  .contact-section input,
+  .contact-section textarea {
+    width: 90%;
+  }
+
+  .box-left {
+    order: 1;
+  }
+  .description-left {
+    order: 2;
+    margin-left: 20px;
+  }
+  .box-right {
+    order: 3;
+  }
+  .description-right {
+    order: 4;
+    margin-right: 20px;
+  }
+}
